@@ -12,4 +12,4 @@
 1. 虹软的SDK ID有次数限制，人脸识别可以换成谷歌的GMV，有一个iOS的姊妹版，基于GMV的
 2. 相机拍摄录制以及滤镜主体框架基于大神[aserbao](https://github.com/aserbao/AndroidCamera.git)的AndroidCamera项目
 3. 相册基于[PictureSelector](https://github.com/LuckSiege/PictureSelector.git)
-4. 倒计时拍照/录制的倒计时基于
+4. 倒计时拍照/录制的倒计时基于[CountdownView](https://github.com/iwgang/CountdownView.git)
