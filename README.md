@@ -1,4 +1,4 @@
-# TrackCamera-ARC
+# TrackCamera-ARC(Apai GO)
 
 #### 介绍
 基于虹软的相机人脸跟踪识别应用，主体目的是与蓝牙硬件链接，做到直播跟脸拍
