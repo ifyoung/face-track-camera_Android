@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="280dip"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialogMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_title_custom_dialog"
+            android:orientation="horizontal"
+            android:paddingLeft="8dip"
+            android:paddingTop="@dimen/seting_items_padding"
+            android:paddingRight="8dip"
+            android:paddingBottom="@dimen/seting_items_padding">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dip"
+                android:textColor="@color/text_yl_tips_color"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/resetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_middle_custom_dialog"
+            android:gravity="center"
+            android:minHeight="50dip"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/text_yl_tips_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_custom_dialog"
+            android:orientation="horizontal"
+            android:paddingLeft="5dip"
+            android:paddingTop="5dip"
+            android:paddingRight="5dip"
+            android:paddingBottom="5dip">
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="0dip"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:background="@drawable/bbuton_info_rounded"
+                android:maxLines="1"
+                android:textColor="@color/text_dialog_color" />
+
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="0dip"
+                android:layout_height="37dp"
+                android:layout_marginLeft="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/bbuton_danger_rounded"
+                android:maxLines="1"
+                android:textColor="@color/text_dialog_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tipLine"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/half_rounded_top"
+            android:gravity="center">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:background="@color/text_white_color"></View>
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/all_theme" />
+
+        <LinearLayout
+            android:layout_width="5dp"
+            android:layout_height="3dp"
+            android:background="@drawable/half_rounded_bot"
+            android:gravity="center">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:background="@color/text_white_color"></View>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/locationTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/messageTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_title_custom_dialog"
+            android:gravity="center|left"
+            android:minHeight="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_custom_dialog"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/goSettingButton"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginLeft="3dip"
+                android:background="@drawable/bbuton_danger_rounded"
+                android:maxLines="1"
+                android:textColor="@color/text_dialog_color" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

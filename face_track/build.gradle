@@ -1,0 +1,164 @@
+apply plugin: 'com.android.application'
+
+// 获取当前系统时间
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+// 获取程序名称
+static def getProductName() {
+    return "Apai Go"
+
+}
+
+//NOTE $ gradle assembleRelease ---win打包命令 ---MAC下为gradlew assembleRelease, ./gradlew aR--简写
+
+Properties props = new Properties()
+props.load(new FileInputStream(file("signing.properties")))
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.Apai.Go"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 17
+        versionName "1.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters "arm64-v8a","armeabi-v7a"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+
+    signingConfigs { //gradle assembleRelease
+//        myConfig {
+////            storeFile file("stone.keystore")
+//            //note 执行命令时，就会被要求输入密码,不好整
+//            storeFile file("ifyoung.jks")
+//            storePassword System.console() != null ? System.console().readLine("\nKeystore password: ") : ""
+//            keyAlias "ifyoung"
+//            keyPassword System.console() != null ? System.console().readLine("\nKey password: ") : ""
+//        }
+
+        release {
+            storeFile file(props['KEYSTORE_FILE'])
+            keyAlias props['KEY_ALIAS']
+            storePassword props['KEYSTORE_PWD']
+            keyPassword props['KEY_PWD']
+//            原文：https://blog.csdn.net/yujihu989/article/details/54589684
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true //是否清理无用资源,依赖于minifyEnabled
+            zipAlignEnabled true //是否启用zipAlign压缩
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        android.applicationVariants.all { variant ->
+            if (variant.buildType.name == 'release') {
+                variant.outputs.all {
+                    outputFileName =  getProductName() + "_v${defaultConfig.versionName}_${releaseTime()}.apk"
+
+                }
+            }
+
+
+
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'cn.bingoogolapple:bga-banner:3.0.0@aar'
+
+    // Use the most recent version of CameraX, currently that is alpha04
+//    def camerax_version = "1.0.0-alpha04"
+//    implementation "androidx.camera:camera-core:${camerax_version}"
+//    implementation "androidx.camera:camera-camera2:${camerax_version}"
+
+
+    //=====================================UI
+//    implementation 'com.android.support:recyclerview-v7:27.1.1'
+//    implementation 'com.android.support:cardview-v7:27.1.1'
+
+//SegmentedButton
+    implementation 'com.github.ceryle:SegmentedButton:v2.0.2'
+    //album
+    implementation 'com.yanzhenjie:album:2.1.3'
+
+
+    //======================================ButterKnife
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    implementation 'com.github.yangjie10930:EpMedia:v0.9.5'
+    implementation 'pub.devrel:easypermissions:0.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.danikula:videocache:2.7.0'
+    //==================mp4parser====================
+    implementation 'com.googlecode.mp4parser:isoparser:1.1.22'
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path: ':picture_library')
+
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'de.hdodenhof:circleimageview:2.0.0'
+
+    implementation("com.squareup.okhttp3:okhttp:3.6.0")
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+
+    // 下面各SDK根据宿主App是否使用相关业务按需引入。
+    // OAID目前为目前国内市场主流的Android Q设备标识，可根据需要选择。
+    // 友盟统计SDK
+    implementation  'com.umeng.umsdk:common:9.1.0' // (必选)
+//    implementation  'com.umeng.umsdk:game:9.1.0+G' // 游戏统计SDK依赖(可选)
+    implementation  'com.umeng.umsdk:asms:1.1.3' // asms包依赖(必选)
+    implementation 'com.umeng.umsdk:crash:0.0.4' // native crash包依赖(必选)
+
+//    implementation  'com.umeng.umsdk:oaid_lenovo:1.0.0' // (可选)
+//    implementation  'com.umeng.umsdk:oaid_mi:1.0.0' // (可选)
+//    implementation  'com.umeng.umsdk:oaid_oppo:1.0.4' // (可选)
+//    implementation  'com.umeng.umsdk:oaid_vivo:1.0.0.1' // (可选)
+
+}
+
+repositories {
+    mavenCentral()
+}

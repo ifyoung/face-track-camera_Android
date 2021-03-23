@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/albumFontLight"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/btn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/str_setting"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/gray" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/albumFontLight"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/sound_off" />
+
+        <ImageView
+            android:id="@+id/sound_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/switch_on" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="60dp"
+            android:gravity="center"
+            android:text="@string/str_sound"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/gray" />
+    <RelativeLayout
+        android:id="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/albumFontLight"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/privacy" />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/p_arrow"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:alpha="0.6"
+            android:src="@drawable/right" />
+
+        <TextView
+            android:layout_marginRight="-20dp"
+            android:layout_toLeftOf="@+id/p_arrow"
+            android:id="@+id/ver_app"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="v1.0"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="60dp"
+            android:gravity="center"
+            android:text="@string/str_privacy"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

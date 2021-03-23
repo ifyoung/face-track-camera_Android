@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="all_theme">#87CEFA</color>
+    //全局的配置 颜色对照表:http://tool.oschina.net/commons?type=3
+    <color name="global_text_color">@color/white</color>
+    <color name="transparent">#00000000</color>
+    //基色
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    //白色
+    <color name="white">#ffffff</color>
+    <color name="white10">#1AFFFFFF</color>
+    <color name="white20">#3effffff</color>
+    <color name="white30">#4bffffff</color>
+    <color name="white40">#66ffffff</color>
+    <color name="white50">#7FFFFFFF</color>
+    <color name="white60">#96ffffff</color>
+    <color name="white70">#B3ffffff</color>
+    <color name="white80">#CCFFFFFF</color>
+    <color name="white90">#E3FFFFFF</color>
+    //黑色
+    <color name="black">#000000</color>
+    <color name="black10">#1A000000</color>
+    <color name="black20">#3e000000</color>
+    <color name="black30">#4b000000</color>
+    <color name="black40">#66000000</color>
+    <color name="black50">#7F000000</color>
+    <color name="black60">#96000000</color>
+    <color name="black70">#B3000000</color>
+    <color name="black80">#CC000000</color>
+    <color name="black90">#E3000000</color>
+
+    //灰色
+    <color name="gray">#BEBEBE</color>
+
+    <color name="middle_gray">#7f808080</color>
+    <color name="color_454545">#454545</color> <!--灰色 -->
+    <color name="FAE000">#FAE000</color>
+
+
+    <color name="text_white_color">#B3B3B3</color>
+    <color name="text_yl_tips_color">#686767</color>
+    <color name="text_dialog_color">#F5F5F5</color>
+    <color name="div_line_edge">#343434</color>
+    <color name="btn_save_clear_po_ne">#805C5C5C</color>
+    <color name="btn_save_clear_po_ne_pressed">#5C5C5C</color>
+
+
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <color name="base_bg">#ffeeeeee</color>
+    <color name="base_msg_color">#ff999999</color>
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#0353B7</color>
+    <color name="gplus_color_4">#b23424</color>
+
+    <color name="lightGray">#FAFAFA</color>
+
+    <!--覆盖自定义-->
+
+    <!--<color name="easy_photos_bar_primary">#FAFAFA</color>-->
+
+
+    <color name="viewfinder_border">#cc0353B7</color>
+
+    <color name="viewfinder_laser">#ff2fb3cb</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_frame">#ff88ae00</color>
+</resources>

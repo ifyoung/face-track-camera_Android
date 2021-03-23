@@ -1,0 +1,2 @@
+include ':face_track',':picture_library', ':ucrop'
+rootProject.name='智拍'

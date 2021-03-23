@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp9">9dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="rl_challenge_padding_left">10dp</dimen>
+    <dimen name="rl_challenge_padding_right">10dp</dimen>
+    <dimen name="jz_start_button_w_h_normal">45dp</dimen>
+    <dimen name="dp48">48dp</dimen>
+
+    <dimen name="seting_items_height">50dip</dimen>
+    <dimen name="seting_items_padding">7dip</dimen>
+    <dimen name="seting_child_items_height">50dip</dimen>
+    <dimen name="seting_child_items_height_r">70dip</dimen>
+    <dimen name="radiu_big_d">12dp</dimen>
+    <dimen name="btn_rounded_corner_radius">5dip</dimen>
+    <!-- 标准字体大小 -->
+    <dimen name="text_size_larger">20.0sp</dimen>
+    <!-- 特大 -->
+    <dimen name="text_size_large">18.0sp</dimen>
+    <!-- 大号 -->
+    <dimen name="text_size_normal">16.0sp</dimen>
+    <!-- 常用 -->
+    <dimen name="text_size_medium">14.0sp</dimen>
+    <!-- 小号 -->
+    <dimen name="text_size_small">12.0sp</dimen>
+</resources>
