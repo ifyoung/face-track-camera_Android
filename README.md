@@ -1,7 +1,7 @@
 # TrackCamera-ARC
 
 #### 介绍
-基于虹软的人脸跟踪识别应用，主体目的是与蓝牙硬件链接，做到直播跟脸拍
+基于虹软的相机人脸跟踪识别应用，主体目的是与蓝牙硬件链接，做到直播跟脸拍
 
 #### 软件架构
 朋友需求，时间紧迫，有点儿赶工，主体框架基于大神[aserbao](https://github.com/aserbao/AndroidCamera.git)的AndroidCamera项目
